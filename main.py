@@ -84,23 +84,8 @@ class FastaReader:
         except (ValueError, OSError, UnicodeError):
             return False
 
-
 if __name__ == "__main__":
-    reader = FastaReader("example.fasta")
-    try:
-        for seq in reader.read():
-            print(seq)
-            print("Длина:", len(seq))
-            print("Тип:", seq.get_alphabet())
-            print()
-    except Exception as error:
-        print("Ошибка:", type(error).__name__, error)
-    print("Проверка формата FASTA:", reader.is_fasta())
-    invalid_reader = FastaReader("invalid.fasta")
-    print("Проверка неправильного FASTA:", invalid_reader.is_fasta())
-
-    if __name__ == "__main__":
-     folder = Path(__file__).resolve().parent
+    folder = Path(__file__).resolve().parent
     reader = FastaReader(folder / "example.fasta")
     try:
         for seq in reader.read():
