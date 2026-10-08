@@ -86,10 +86,11 @@ class FastaReader:
 
 if __name__ == "__main__":
     folder = Path(__file__).resolve().parent
-    reader = FastaReader(folder / "example.fasta")
+    filename = input("Введите название FASTA-файла: ")
+    reader = FastaReader(folder / filename) 
     try:
         for seq in reader.read():
-            print(seq)
+            print("Название:", seq.header)
             print("Длина:", len(seq))
             print("Тип:", seq.get_alphabet())
             print()
