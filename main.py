@@ -94,8 +94,10 @@ if __name__ == "__main__":
             print("Длина:", len(seq))
             print("Тип:", seq.get_alphabet())
             print()
+
+    except FileNotFoundError:
+        print("Извините, такого файла не существует.")
+        print("Проверьте название файла или создайте/скачайте FASTA-файл.")
+
     except Exception as error:
         print("Ошибка:", type(error).__name__, error)
-    print("Проверка формата FASTA:", reader.is_fasta())
-    invalid_reader = FastaReader(folder / "invalid.fasta")
-    print("Проверка неправильного FASTA:", invalid_reader.is_fasta())
