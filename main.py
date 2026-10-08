@@ -83,26 +83,22 @@ class FastaReader:
             return True
         except (ValueError, OSError, UnicodeError):
             return False
-
 if __name__ == "__main__":
     folder = Path(__file__).resolve().parent
     filename = input("Введите название FASTA-файла: ").strip()
-
-if not filename:
-    print("Ошибка: вы не ввели название файла.")
-    print("Пожалуйста, укажите название FASTA-файла, например sequence.fasta.")
-else:
-    reader = FastaReader(folder / filename)
-    try:
-        for seq in reader.read():
-            print("Название:", seq.header)
-            print("Длина:", len(seq))
-            print("Тип:", seq.get_alphabet())
-            print()
-
-    except FileNotFoundError:
-        print("Извините, такого файла не существует.")
-        print("Проверьте название файла или создайте/скачайте FASTA-файл.")
-
-    except Exception as error:
-        print("Ошибка:", type(error).__name__, error)
+    if not filename:
+        print("Ошибка: вы не ввели название файла.")
+        print("Пожалуйста, укажите название FASTA-файла, например sequence.fasta.")
+    else:
+        reader = FastaReader(folder / filename)
+        try:
+            for seq in reader.read():
+                print("Название:", seq.header)
+                print("Длина:", len(seq))
+                print("Тип:", seq.get_alphabet())
+                print()
+        except FileNotFoundError:
+            print("Извините, такого файла не существует.")
+            print("Проверьте название файла или создайте/скачайте FASTA-файл.")
+        except Exception as error:
+            print("Ошибка:", type(error).__name__, error)
