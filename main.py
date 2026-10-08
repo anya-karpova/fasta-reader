@@ -29,7 +29,11 @@ class Seq:
         nucleotide = set("ACGTURYSWKMBDHVN")
         protein = set("ACDEFGHIKLMNPQRSTVWYBXZJUO*")
         letters = set(self.sequence)
-        if letters.issubset(nucleotide):
+        if not letters:
+          return "неизвестная"
+        if letters.issubset(nucleotide) and letters.issubset(protein):
+           return "неоднозначная"
+        elif letters.issubset(nucleotide):
             return "нуклеотидная"
         elif letters.issubset(protein):
             return "белковая"
