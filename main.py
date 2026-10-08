@@ -87,6 +87,7 @@ class FastaReader:
             return True
         except (ValueError, OSError, UnicodeError):
             return False
+        
 if __name__ == "__main__":
     folder = Path(__file__).resolve().parent
     filename = input("Введите название FASTA-файла: ").strip()

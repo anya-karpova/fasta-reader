@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="370" viewBox="0 0 1100 370" role="img" aria-labelledby="title desc">
+<title id="title">UML-диаграмма классов Seq и FastaReader</title>
+<desc id="desc">FastaReader создаёт объекты Seq. Показаны атрибуты, методы и типы.</desc>
+<rect width="1100" height="370" fill="#ffffff"/>
+<rect x="36" y="43" width="465" height="281" rx="5" fill="#ffffff" stroke="#263746" stroke-width="2"/>
+<rect x="36" y="43" width="465" height="44" rx="5" fill="#eaf0f7"/>
+<path d="M36 87H501 M36 150H501" fill="none" stroke="#263746" stroke-width="1.5"/>
+<text x="268.5" y="71" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#15232e">Seq</text>
+<g font-family="Menlo,Consolas,monospace" font-size="17" fill="#17212b">
+<text x="53" y="112">+ header: str</text>
+<text x="53" y="137">+ sequence: str</text>
+<text x="53" y="178">+ __init__(header: str, sequence: str): None</text>
+<text x="53" y="205">+ __len__(): int</text>
+<text x="53" y="232">+ __str__(): str</text>
+<text x="53" y="259">+ __repr__(): str</text>
+<text x="53" y="286">+ get_alphabet(): str</text>
+</g>
+<rect x="669" y="66" width="399" height="220" rx="5" fill="#ffffff" stroke="#263746" stroke-width="2"/>
+<rect x="669" y="66" width="399" height="44" rx="5" fill="#eaf0f7"/>
+<path d="M669 110H1068 M669 150H1068" fill="none" stroke="#263746" stroke-width="1.5"/>
+<text x="868.5" y="94" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#15232e">FastaReader</text>
+<g font-family="Menlo,Consolas,monospace" font-size="17" fill="#17212b">
+<text x="685" y="137">+ file_path: str | Path</text>
+<text x="685" y="181">+ __init__(file_path: str | Path): None</text>
+<text x="685" y="209">+ read(): Iterator[Seq]</text>
+<text x="685" y="237">+ is_fasta(): bool</text>
+</g>
+<path d="M669 191H507" stroke="#263746" stroke-width="2" stroke-dasharray="8,6" fill="none"/>
+<path d="M520 183L506 191L520 199" stroke="#263746" stroke-width="2" fill="none"/>
+<rect x="553" y="163" width="80" height="22" fill="#ffffff"/>
+<text x="593" y="179" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#17212b">«create»</text>
+</svg>
